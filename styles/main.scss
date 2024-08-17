@@ -1,0 +1,19 @@
+// base
+@import "base/vars";
+@import "base/general";
+@import "base/fonts";
+@import "base/transitions";
+
+// plugins
+@import "plugins/simplebar.scss";
+
+// components
+@import "/components/global/Preloader/Preloader.scss";
+@import "/components/controls/Input/Input.scss";
+@import "/components/controls/Checkbox/Checkbox.scss";
+@import "/components/controls/Dropdown/Dropdown.scss";
+@import "/components/global/CustomForm/CustomForm.scss";
+
+// pages
+@import "pages/home.scss";
+@import "pages/error.scss";

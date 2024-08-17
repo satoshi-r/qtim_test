@@ -1,0 +1,10 @@
+$black: #000;
+$white: #fff;
+$gray-1: #cbcbcd;
+
+$pfsquare: "PFSquareSansPro", sans-serif;
+$baseFont: $pfsquare;
+
+$speedDefault: 0.25s;
+$easing1: cubic-bezier(0.65, 0.05, 0.36, 1);
+$transition: all $speedDefault $easing1;

@@ -1,0 +1,72 @@
+@import "bootstrap/scss/bootstrap-reboot.scss";
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+::placeholder {
+    color: #666;
+}
+
+::selection {
+    background-color: $black;
+    color: $white;
+}
+
+* {
+    -webkit-font-smoothing: antialiased; // сглаживание шрифтов
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+textarea {
+    outline: none;
+    box-shadow: none;
+
+    &:focus:required:invalid {
+        border-color: red;
+    }
+
+    &:required:valid {
+        border-color: green;
+    }
+}
+
+a,
+label {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+button {
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+html {
+    font-family: $baseFont;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $baseFont;
+    min-width: 320px;
+    position: relative;
+    background: $white;
+    color: $black;
+}
+
+picture {
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+}
