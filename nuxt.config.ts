@@ -133,7 +133,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    'nuxt-proxy',
+    'nuxt-svgo',
     'nuxt-swiper',
     '@nuxtjs/sitemap',
     [
