@@ -4,7 +4,7 @@
     <div @click="toggle" class="dropdown__btn">
       <div class="dropdown__placeholder">{{ placeholder }}</div>
       <div class="dropdown__arrow">
-        <img src="/icons/arrow-down-black-1.svg" alt="" />
+        <!-- <img src="/icons/arrow-down-black-1.svg" alt="" /> -->
       </div>
     </div>
     <transition name="fade">

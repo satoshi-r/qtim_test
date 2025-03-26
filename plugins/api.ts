@@ -6,7 +6,7 @@ export default defineNuxtPlugin(() => {
   const { token } = storeToRefs(useAuthStore()) || ''
 
   const $api = $fetch.create({
-    baseURL: config.public.baseUrl + `${config.public.locale}/`,
+    baseURL: config.public.baseUrl,
     headers: {
       Authorization: `Bearer ${token.value}`,
     },

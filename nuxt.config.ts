@@ -40,12 +40,12 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Nuxt 3 Template',
+      title: 'Qtim',
       meta: [
         { charset: 'utf-8' },
         {
           name: 'theme-color',
-          content: '#5956E9',
+          content: '#e2beff',
         },
         {
           name: 'viewport',
@@ -61,7 +61,7 @@ export default defineNuxtConfig({
         },
         {
           property: 'og:image',
-          content: '/og_img_free.jpg',
+          content: '/cover.jpg',
         },
       ],
       link: [
@@ -88,32 +88,11 @@ export default defineNuxtConfig({
         },
         {
           rel: 'preload',
-          type: 'font/woff',
-          href: '/fonts/PTSans-Regular.woff',
-          as: 'font',
-          crossorigin: true,
-        },
-        {
-          rel: 'preload',
           type: 'font/woff2',
-          href: '/fonts/PTSans-Regular.woff2',
+          href: '/fonts/TTCommons-Regular.woff2',
           as: 'font',
           crossorigin: true,
         },
-        {
-          rel: 'preload',
-          type: 'font/woff',
-          href: '/fonts/PTSans-Bold.woff',
-          as: 'font',
-          crossorigin: true,
-        },
-        {
-          rel: 'preload',
-          type: 'font/woff2',
-          href: '/fonts/PTSans-Bold.woff2',
-          as: 'font',
-          crossorigin: true,
-        }
       ],
     },
   },

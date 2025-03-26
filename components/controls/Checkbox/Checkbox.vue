@@ -7,7 +7,7 @@
       @input="emit('input', id)"
     />
     <div class="checkbox__icon">
-      <img src="/icons/checkbox-white.svg" alt="" />
+      <!-- <img src="/icons/checkbox-white.svg" alt="" /> -->
     </div>
     <div class="checkbox__title">{{ title }}</div>
   </label>

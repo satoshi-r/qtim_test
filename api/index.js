@@ -1,9 +1,5 @@
-import forms from './forms'
-import pages from './pages'
-import vars from './vars'
+import posts from './posts'
 
 export default {
-  forms,
-  pages,
-  vars,
+  posts,
 }

@@ -14,9 +14,6 @@ defineProps({
   }
 })
 
-// const vars = useVarsStore()
-// await callOnce(vars.fetch)
-
 const commonStore = useCommonStore()
 const nuxtApp = useNuxtApp()
 

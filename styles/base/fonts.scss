@@ -20,7 +20,4 @@
 }
 
 
-@include font('PTSans', normal, 400, '/fonts/PTSans-Regular.woff2', 'woff2');
-@include font('PTSans', normal, 400, '/fonts/PTSans-Regular.woff', 'woff');
-@include font('PTSans', normal, 700, '/fonts/PTSans-Bold.woff2', 'woff2');
-@include font('PTSans', normal, 700, '/fonts/PTSans-Bold.woff', 'woff');
+@include font('TTCommons', normal, 400, '/fonts/TTCommons-Regular.woff2', 'woff2');

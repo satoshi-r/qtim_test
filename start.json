@@ -1,7 +1,7 @@
 {
     "apps" : [
         {
-            "name": "sgbi",
+            "name": "qtim-test",
             "script": "/var/www/sgbi/dist/.output/server/index.mjs",
             "port": 3000,
             "instances": 3,
