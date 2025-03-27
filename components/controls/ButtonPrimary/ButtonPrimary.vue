@@ -12,32 +12,19 @@
   </component>
 </template>
 
-<script setup>
-const props = defineProps({
-  to: {
-    type: [String, Object],
-    required: false,
-    default: null,
-  },
-  href: {
-    type: String,
-    required: false,
-    default: null,
-  },
-  loading: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
-  clearedStyle: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
+<script setup lang="ts">
+const props = withDefaults(defineProps<{
+  to?: string | object | null
+  href?: string | null
+  loading?: boolean
+  clearedStyle?: boolean
+}>(), {
+  loading: false,
+  clearedStyle: false,
 })
 
 const link = computed(() => props.to || props.href)
-const isExternalLink = computed(() => /^(https?:\/\/)/i.test(props.href))
+const isExternalLink = computed(() => /^(https?:\/\/)/i.test(props?.href || ''))
 const componentTag = computed(() => {
   if (link.value) return defineNuxtLink({})
   return 'button'

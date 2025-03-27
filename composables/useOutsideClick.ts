@@ -1,6 +1,6 @@
-const useOutsideClick = (targetRef, callback) => {
-  const handler = (event) => {
-    if (targetRef.value && !targetRef.value.contains(event.target)) {
+const useOutsideClick = (targetRef: Ref<HTMLElement>, callback: (event: Event) => void) => {
+  const handler = (event: Event) => {
+    if (targetRef.value && !targetRef.value.contains(event.target as Node)) {
       callback(event)
     }
   }

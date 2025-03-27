@@ -6,11 +6,11 @@
           Articles
         </h1>
 
-        <transition-group mode="out-in" name="fade-scale" tag="div" class="articles__list">
+        <div class="articles__list">
           <KeepAlive>
             <ArticleCard v-for="article in visibleArticles" :key="article.id" :content="article" />
           </KeepAlive>
-        </transition-group>
+        </div>
 
         <Pagination v-if="articles?.length" v-model:currentPage="currentPage" :totalItems="articles.length"
           :itemsPerPage="PAGE_SIZE" />
@@ -23,12 +23,12 @@
 import API from '@/api'
 import type { Article } from '@/types/article'
 
-const currentPage = ref(1)
+const currentPage = ref<number>(1)
 const { $api } = useNuxtApp()
 const { data: articles } = await useAsyncData<Article[]>('articles', () => $api(API.posts.getPosts()))
 const { updateQuery } = useQueries()
 
-const visibleArticles = computed(() => {
+const visibleArticles = computed<Article[]>(() => {
   if (!articles.value) return []
 
   const start = (currentPage.value - 1) * PAGE_SIZE
@@ -37,7 +37,7 @@ const visibleArticles = computed(() => {
 })
 
 watch(currentPage, () => {
-  updateQuery({ page: currentPage.value })
+  updateQuery({ page: String(currentPage.value) })
 })
 
 onMounted(() => {

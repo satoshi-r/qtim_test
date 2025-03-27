@@ -9,13 +9,11 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  preloader: {
-    type: Boolean,
-    required: false,
-    default: true
-  }
+<script setup lang="ts">
+withDefaults(defineProps<{
+  preloader?: boolean
+}>(), {
+  preloader: true,
 })
 
 const commonStore = useCommonStore()

@@ -136,7 +136,7 @@ export default defineNuxtConfig({
   // 	id: "UA-179814976-1"
   // },
 
-  plugins: ['~/plugins/click-outside.js', '~/plugins/simplebar.js'],
+  plugins: ['~/plugins/click-outside.ts', '~/plugins/simplebar.ts'],
 
   sitemap: {
     xsl: false,

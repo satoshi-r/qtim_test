@@ -16,11 +16,14 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+const props = withDefaults(defineProps<{
     totalItems: number
     itemsPerPage: number
     currentPage: number
-}>()
+    maxVisiblePages?: number
+}>(), {
+    maxVisiblePages: 5,
+})
 
 const emit = defineEmits<{
     'update:currentPage': [page: number]
@@ -30,13 +33,12 @@ const totalPages = computed(() => Math.ceil(props.totalItems / props.itemsPerPag
 
 const displayedPages = computed(() => {
     const pages: number[] = []
-    const maxVisiblePages = 5
 
     let start = Math.max(1, props.currentPage - 2)
-    let end = Math.min(totalPages.value, start + maxVisiblePages - 1)
+    let end = Math.min(totalPages.value, start + props.maxVisiblePages - 1)
 
-    if (end - start + 1 < maxVisiblePages) {
-        start = Math.max(1, end - maxVisiblePages + 1)
+    if (end - start + 1 < props.maxVisiblePages) {
+        start = Math.max(1, end - props.maxVisiblePages + 1)
     }
 
     for (let i = start; i <= end; i++) {

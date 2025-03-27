@@ -22,6 +22,4 @@ const { slug } = route.params
 const { $api } = useNuxtApp()
 
 const { data: article } = await useAsyncData<Article>('article', () => $api(API.posts.getPostById(slug)))
-console.log(article.value);
-
 </script>

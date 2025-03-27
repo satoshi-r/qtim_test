@@ -11,7 +11,7 @@ export const useBodyScrollLock = () => {
     }
   }
 
-  const watchBodyScroll = (target) => {
+  const watchBodyScroll = (target: Ref<boolean>) => {
     watchEffect(() => {
       target.value ? lockBodyScroll() : unlockBodyScroll()
     })
