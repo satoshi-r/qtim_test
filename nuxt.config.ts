@@ -6,6 +6,7 @@ import API from './api'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   runtimeConfig: {
     public: {
       baseUrl: config.baseURL,
@@ -20,6 +21,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   nitro: {
     devProxy: {
       '/media': {
@@ -28,10 +30,13 @@ export default defineNuxtConfig({
       },
     },
   },
+
   ssr: true,
+
   typescript: {
     shim: false,
   },
+
   alias: {
     '@': fileURLToPath(new URL('./', import.meta.url)),
   },
@@ -61,7 +66,7 @@ export default defineNuxtConfig({
         },
         {
           property: 'og:image',
-          content: '/cover.jpg',
+          content: '/images/cover.jpg',
         },
       ],
       link: [
@@ -152,4 +157,6 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['store'],
   },
+
+  compatibilityDate: '2025-03-27',
 })

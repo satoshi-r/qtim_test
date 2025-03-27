@@ -1,0 +1,38 @@
+.article-page {
+    .article {
+        padding-top: 240px;
+        padding-bottom: 80px;
+
+        &__img {
+            position: relative;
+            width: 100%;
+            margin-top: 72px;
+            padding-top: 60%;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                object-position: center;
+            }
+        }
+
+        &__caption {
+            margin-top: 80px;
+            font-size: 16px;
+            line-height: 16px;
+
+        }
+
+        &__description {
+            margin-top: 32px;
+            max-width: 695px;
+            font-size: 36px;
+            line-height: 45px;
+        }
+    }
+}

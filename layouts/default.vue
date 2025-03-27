@@ -1,7 +1,11 @@
 <template>
   <div class="page-wrapper">
     <Preloader v-if="preloader" />
-    <slot />
+    <HeaderBlock />
+    <div class="page-inner">
+      <slot />
+    </div>
+    <FooterBlock />
   </div>
 </template>
 

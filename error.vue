@@ -9,11 +9,13 @@ const props = defineProps({
 <template>
   <NuxtLayout :preloader="false">
     <div class="error-page">
-      <div class="error-page__code">
-        {{ props.error?.statusCode }}
-      </div>
-      <div class="error-page__message">
-        {{ props.error?.statusMessage }}
+      <div class="container">
+        <div class="error-page__code">
+          {{ props.error?.statusCode }}
+        </div>
+        <div class="error-page__message">
+          {{ props.error?.statusMessage }}
+        </div>
       </div>
     </div>
   </NuxtLayout>

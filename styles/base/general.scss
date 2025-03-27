@@ -61,7 +61,7 @@ body {
     min-width: 320px;
     position: relative;
     background: $white;
-    color: $black;
+    color: $black-1;
     overflow-x: hidden;
 
     &.scroll-lock {
@@ -73,4 +73,18 @@ picture {
     display: block;
     text-align: center;
     margin: 0px auto;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 112px;
+}
+
+.title {
+    font-size: 84px;
+    line-height: 84px;
+    margin: 0;
+    display: block;
 }

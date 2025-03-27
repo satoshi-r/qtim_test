@@ -1,4 +1,4 @@
 export default {
-    posts: () => 'posts/',
-    postById: (id) => `posts/${id}`,
+    getPosts: () => 'posts/',
+    getPostById: (id) => `posts/${id}`,
 }

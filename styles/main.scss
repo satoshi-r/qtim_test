@@ -9,11 +9,13 @@
 
 // components
 @import "/components/global/Preloader/Preloader.scss";
-@import "/components/controls/Input/Input.scss";
-@import "/components/controls/Checkbox/Checkbox.scss";
-@import "/components/controls/Dropdown/Dropdown.scss";
-@import "/components/global/CustomForm/CustomForm.scss";
+@import "/components/controls/ButtonPrimary/ButtonPrimary.scss";
+@import "/components/global/HeaderBlock/HeaderBlock.scss";
+@import "/components/global/FooterBlock/FooterBlock.scss";
+@import "/components/global/ArticleCard/ArticleCard.scss";
+@import "/components/controls/Pagination/Pagination.scss";
 
 // pages
 @import "pages/home.scss";
+@import "pages/article.scss";
 @import "pages/error.scss";
