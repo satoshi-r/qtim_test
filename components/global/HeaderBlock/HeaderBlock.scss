@@ -79,7 +79,7 @@
                 transform: scale(1.1);
             }
         }
-        
+
         &-icon {
             width: 24px;
             height: 24px;
@@ -92,5 +92,112 @@
 
     &__btn {
         margin-left: 16px;
+    }
+
+    &__menu {
+        display: none;
+
+        &-btn {
+            display: none;
+        }
+    }
+
+    @include below(768px) {
+        height: 64px;
+
+        &__inner {
+            padding: 0 20px;
+        }
+
+        &__logo {
+            width: 56px;
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__lang {
+            margin-left: 0;
+            width: 40px;
+            height: 40px;
+
+            &-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__btn {
+            margin-left: 10px;
+        }
+
+        
+        &__menu {
+            position: fixed;
+            z-index: 100;
+            top: 64px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 64px);
+            background: $white;
+            padding: 20px;
+            display: block;
+
+            &-link {
+                font-size: 18px;
+                line-height: 18px;
+                color: $black-1;
+                cursor: pointer;
+                transition: $transition;
+                display: block;
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-btn {
+                margin-left: 10px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $black-1;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: $transition;
+                position: relative;
+
+                img {
+                    width: 20px;
+                    height: auto;
+                    object-fit: contain;
+                    display: block;
+                    position: absolute;
+                    transition: $transition;
+                }
+
+                .open {
+                    opacity: 1;
+                }
+
+                .close {
+                    opacity: 0;
+                }
+
+                &.opened {
+                    .open {
+                        opacity: 0;
+                    }
+
+                    .close {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
 }

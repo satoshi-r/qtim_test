@@ -80,6 +80,10 @@ picture {
     width: 100%;
     margin: 0 auto;
     padding: 0 112px;
+
+    @include below(768px) {
+        padding: 0 20px;
+    }
 }
 
 .title {
@@ -87,4 +91,9 @@ picture {
     line-height: 84px;
     margin: 0;
     display: block;
+
+    @include below(768px) {
+        font-size: 48px;
+        line-height: 48px;
+    }
 }

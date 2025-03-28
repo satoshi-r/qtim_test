@@ -54,4 +54,21 @@
         transition: $transition;
         opacity: 0;
     }
+
+    @include below(768px) {
+        &__preview {
+            font-size: 16px;
+            line-height: 19px;
+            margin-top: 16px;
+        }
+
+        &__btn {
+            position: relative;
+            font-size: 18px;
+            line-height: 18px;
+            margin-top: 10px;
+            opacity: 1;
+        }
+
+    }
 }

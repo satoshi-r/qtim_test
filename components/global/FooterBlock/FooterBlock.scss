@@ -148,4 +148,45 @@
             text-align: center;
         }
     }
+
+    @include below(1280px) {
+        &__title {
+            font-size: 82px;
+            line-height: 82px;
+        }
+
+        &__bottom {
+
+            &-circle,
+            &-text {
+                display: none;
+            }
+        }
+    }
+
+    @include below(768px) {
+        padding-top: 60px;
+
+        &__top {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        
+        &__caption {
+            margin-bottom: 24px;
+        }
+
+        &__title {
+            font-size: 42px;
+            line-height: 42px;
+        }
+
+        &__bottom {
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+    }
 }

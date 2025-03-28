@@ -13,5 +13,25 @@
             row-gap: 40px;
             column-gap: 32px;
         }
+
+        @include below(1280px) {
+            &__list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @include below(768px) {
+            padding-top: 120px;
+            padding-bottom: 60px;
+
+            &__title {
+                margin-bottom: 32px;
+            }
+
+            &__list {
+                grid-template-columns: 1fr;
+                row-gap: 24px;
+            }
+        }
     }
 }
